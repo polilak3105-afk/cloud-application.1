@@ -51,3 +51,9 @@ def delete_service(service_id: int):
 
     return None
 
+def get_services_by_status(status: str):
+    return [
+        service
+        for service in services_data
+        if service["status"] == status
+    ]
